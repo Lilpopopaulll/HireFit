@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&display=swap');
+
+
+* {
+    box-sizing: border-box;
+}
+
+
+.accueil {
+    width: 100vw;
+    height: 100vh;
+    background: #ffffff;
+}
+
+.landing-page-container {
+    padding: 0;
+    z-index : 1;
+    margin : 3vh 1vw;
+    position : absolute;
+    background-color: #f8f869;
+    width: 98vw;
+    height: 85vh;
+    border-bottom-left-radius: 45px;
+    border-bottom-right-radius: 45px;
+}
+
+
+.accroche {
+    margin-left : 5%;
+    margin-top : 10%;
+    width : 60%;
+}
+.slogan {
+    font-family: 'DynaPuff', sans-serif;
+    font-size : 5.5vw;
+}
+
+.button-start {
+    border-radius : 50px;
+    font-weight: bold;
+    font-size : 1.5vw;
+    padding : 1vw 3vw;
+    border : 3px solid black;
+    background-color: rgba(142, 248, 113);
+    position: absolute;
+    top : 100%;
+    left : 50%;
+    transform: translate(-50%,-50%);
+    transition : ease-in-out 0.3s;
+}
+
+.button-start:hover {
+    background-color: lightgray;
+    padding: 1.3vw 4vw;
+}

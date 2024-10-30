@@ -1,0 +1,54 @@
+/* Style de la bannière */
+.banner {
+    width: 100%;
+    margin-top : 1vh;
+    overflow: hidden;
+    background-color: #ffffff;
+    color: #ff0000;
+    white-space: nowrap;
+}
+
+/* Style pour le contenu défilant */
+.banner-content {
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: inline-flex;
+    gap: 1vw; /* Espace entre chaque "hirefit" ajusté pour être responsive */
+    animation: scroll 10s linear infinite;
+    width: 100%; /* Largeur étendue pour remplir l'écran */
+}
+
+/* Animation de défilement */
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Styles réactifs */
+@media (max-width: 1024px) {
+    .banner-content {
+        font-size: 1.5rem;
+        gap: 3vw;
+        animation: scroll 15s linear infinite; /* Accélère un peu l'animation */
+    }
+}
+
+@media (max-width: 768px) {
+    .banner-content {
+        font-size: 1.2rem;
+        gap: 4vw;
+        animation: scroll 12s linear infinite; /* Accélère encore plus */
+    }
+}
+
+@media (max-width: 480px) {
+    .banner-content {
+        font-size: 1rem;
+        gap: 5vw;
+        animation: scroll 10s linear infinite; /* Vitesse rapide pour petits écrans */
+    }
+}
