@@ -1,7 +1,7 @@
 import NavBar from "../components/NavBar";
 import '../styles/accueil.css'
 import HireFitBanner from "../components/HireFitBanner";
-import FileUpload from "../components/FileUpload";
+import CVUploadForm from "../components/CVUploadForm";
 
 
 const Accueil : React.FC = () => {
@@ -11,12 +11,12 @@ const Accueil : React.FC = () => {
                 <div className="landing-page-container">
                     <NavBar></NavBar>
                     <div className="accroche">
-                        <h1 className="slogan">TRANSFORMEZ VOTRE CV, TRANSFORMEZ VOTRE AVENIR.</h1>
+                        <h1 className="slogan">Transformez votre votre cv, transformez votre avenir.</h1>
                     </div>
                     <button className="button-start">Get Started</button>
                 </div>
             </div>
-            <FileUpload/>
+
         </>
 
 

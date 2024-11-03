@@ -1,8 +1,10 @@
 import React from 'react';
-import './App.css';
+import './styles/App.css';
+import './styles/Responsive.css'
 import {BrowserRouter, BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 
 import Accueil from './pages/Accueil';
+import Score from './pages/ScorePage'
 
 function App() {
   return (
@@ -10,7 +12,7 @@ function App() {
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Accueil/>}/>
-
+            <Route path="/score" element={<Score/>}/>
           </Routes>
         </BrowserRouter>
       </>

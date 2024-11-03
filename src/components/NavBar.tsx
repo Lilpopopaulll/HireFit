@@ -1,39 +1,34 @@
 import '../styles/navbar.css';
 import { Link } from 'react-router-dom';
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 
 const NavBar: React.FC = () => {
-    // State pour suivre si l'utilisateur a défilé au-delà de 100vh
-    const [isScrolled, setIsScrolled] = useState(false);
+    const [isOpen, setIsOpen] = useState(false);
 
-    useEffect(() => {
-        // Fonction pour gérer le défilement
-        const handleScroll = () => {
-            if (window.scrollY > 0.8*window.innerHeight) {
-                setIsScrolled(true);
-            } else {
-                setIsScrolled(false);
-            }
-        };
-
-        // Ajouter un écouteur de défilement
-        window.addEventListener('scroll', handleScroll);
-
-        // Nettoyage : retirer l'écouteur lors du démontage du composant
-        return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
+    const toggleMenu = () => {
+        setIsOpen(!isOpen);
+    };
 
     return (
-        <div className={`nav-bar ${isScrolled ? 'scrolled' : ''}`}>
+        <div className="nav-bar">
             <div className="bar"></div>
             <div className="nav-bar-container">
-                <h3 className="nav-bar-title">HIREFIT</h3>
-                <div className="nav-bar-menu">
+                <h2 className="nav-bar-title">HIREFIT</h2>
+
+                {/* Bouton pour le menu mobile */}
+                <button className="nav-bar-toggle" onClick={toggleMenu}>
+                    ☰
+                </button>
+
+                {/* Menu de navigation */}
+                <div className={`nav-bar-menu ${isOpen ? "open" : ""}`}>
                     <div><Link className="nav-bar-items" to="/home">Menu</Link></div>
                     <div><Link className="nav-bar-items" to="/home">Photos</Link></div>
                     <div><Link className="nav-bar-items" to="/home">Evènements</Link></div>
                     <div><Link className="nav-bar-items" to="/home">Accès/Contact</Link></div>
                 </div>
+
+                {/* Boutons et options de langue */}
                 <div className="nav-bar-buttons">
                     <button className="nav-bar-reservation">S'INSCRIRE</button>
                     <select id="langage">
@@ -44,9 +39,8 @@ const NavBar: React.FC = () => {
                 </div>
             </div>
             <div className="bar"></div>
-
         </div>
     );
-}
+};
 
 export default NavBar;

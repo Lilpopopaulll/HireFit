@@ -1,0 +1,190 @@
+.score-page {
+    width: 100%; /* Change à 100% pour éviter les débordements */
+}
+
+.score-page-header {
+    position: relative;
+    margin-left: 5%;
+}
+
+.header-name {
+    margin: 2vh 0 0 0;
+    padding: 0;
+}
+
+.header-sub {
+    margin: 0;
+    padding: 0;
+    font-size: 1.2rem;
+    color: grey;
+}
+
+.cv-bg {
+    background-color: rgba(255, 20, 147, 0.57);
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+    width: 100%;
+    min-height: 125vh;
+    position: absolute;
+    top: 50%;
+    z-index: -1;
+}
+
+.cv-scorage {
+    width: 100%; /* Change à 100% */
+}
+
+.cv-container {
+    background-color: rgb(223, 223, 223);
+    width: 60vw; /* Gardez cela, mais assurez-vous que le parent est correct */
+    height: 50vh;
+    border-radius: 20px;
+    margin: 3vh auto 1vh auto;
+    padding: 0;
+    box-sizing: border-box; /* Ajoute box-sizing pour éviter les débordements */
+}
+
+.score {
+    font-size: 10vh;
+    font-weight: bold;
+    text-align: center;
+    color: rgba(255, 255, 255, 1);
+    margin: 0;
+}
+
+.pourcentage {
+    font-size: 2rem;
+}
+
+.button-amélioration {
+    display: block;
+    padding: 1.5vh 7vw;
+    border-radius: 20px;
+    background-color: white;
+    border: none;
+    font-weight: 700;
+    margin: 1vh auto 0 auto; /* Assurez-vous que ceci est correct pour votre mise en page */
+    z-index: 1;
+    box-sizing: border-box; /* Ajoute box-sizing */
+}
+
+.analyse-detaillee {
+    background-color: #ffffff;
+    margin: 5vh auto;
+    border-radius: 40px;
+    width: 96%;
+    height: 60vh;
+    box-sizing: border-box; /* Ajoute box-sizing */
+}
+
+.analyse-main-title {
+    margin-left: 5vw;
+    font-weight: 500;
+    color: #000000;
+}
+
+.analyse-bar {
+    width: 90%;
+    height: 2px;
+    background-color: #000000;
+    margin-left: 5vw;
+}
+
+.analyse {
+    display: flex;
+    flex-wrap: wrap; /* Permet aux éléments de se répartir sur plusieurs lignes */
+    margin: 2vh 4vw; /* Ajoute des marges horizontales au conteneur */
+    box-sizing: border-box; /* Ajoute box-sizing ici aussi */
+}
+
+/* Styles pour chaque bloc */
+.analyse-block {
+    flex: 1 1 100%; /* Par défaut, largeur complète sur mobile */
+    box-sizing: border-box; /* Inclut padding et bordure dans la largeur totale */
+    padding: 10px;
+    margin-top: 2vh;
+    border : 3px solid black;
+    border-radius: 30px;
+}
+
+.points-title {
+    text-align: center;
+    margin-top: 15vh;
+}
+.points-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5vw;
+    justify-content: space-between;
+    margin: 25vh auto;
+    width: 80%;
+    box-sizing: border-box;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s ease forwards; /* Animation d'apparition */
+}
+
+.points-column {
+    flex: 1 1 45%;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    margin: 10px 0;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition pour les effets de survol */
+}
+
+.points-column:hover {
+    transform: translateY(-5px); /* Élève légèrement le bloc au survol */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3); /* Ombre plus forte au survol */
+}
+
+.points-faibles {
+    background-color: rgba(255, 0, 0, 0.1);
+    border: 1px solid rgba(255, 0, 0, 0.3);
+    color: #ff0000;
+}
+
+.points-forts {
+    background-color: rgba(0, 255, 0, 0.1);
+    border: 1px solid rgba(0, 255, 0, 0.3);
+    color: #00a000;
+}
+
+/* Style pour les éléments de liste */
+.points-column ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.points-column li {
+    margin: 5px 0;
+}
+
+/* Responsive : empile les colonnes sur mobile */
+@media (max-width: 600px) {
+    .points-column {
+        flex: 1 1 100%;
+    }
+}
+
+/* Animation d'apparition */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (min-width: 600px) {
+    .analyse-block {
+        flex: 1 1 calc(45% - 20px); /* Deux colonnes avec une certaine marge */
+        margin: 10px; /* Gardez la même marge pour l'espacement */
+    }
+}
+
+
