@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/hirefit/static/css/main.d6129e92.css",
+    "main.js": "/hirefit/static/js/main.cf6e756f.js",
+    "static/js/453.45dbc65f.chunk.js": "/hirefit/static/js/453.45dbc65f.chunk.js",
+    "index.html": "/hirefit/index.html",
+    "main.d6129e92.css.map": "/hirefit/static/css/main.d6129e92.css.map",
+    "main.cf6e756f.js.map": "/hirefit/static/js/main.cf6e756f.js.map",
+    "453.45dbc65f.chunk.js.map": "/hirefit/static/js/453.45dbc65f.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d6129e92.css",
+    "static/js/main.cf6e756f.js"
+  ]
+}
