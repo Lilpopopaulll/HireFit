@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/hirefit/static/css/main.d6129e92.css",
-    "main.js": "/hirefit/static/js/main.cf6e756f.js",
-    "static/js/453.45dbc65f.chunk.js": "/hirefit/static/js/453.45dbc65f.chunk.js",
-    "index.html": "/hirefit/index.html",
-    "main.d6129e92.css.map": "/hirefit/static/css/main.d6129e92.css.map",
-    "main.cf6e756f.js.map": "/hirefit/static/js/main.cf6e756f.js.map",
-    "453.45dbc65f.chunk.js.map": "/hirefit/static/js/453.45dbc65f.chunk.js.map"
+    "main.css": "/HireFit/static/css/main.d6129e92.css",
+    "main.js": "/HireFit/static/js/main.fcdc210b.js",
+    "static/js/453.45dbc65f.chunk.js": "/HireFit/static/js/453.45dbc65f.chunk.js",
+    "index.html": "/HireFit/index.html",
+    "main.d6129e92.css.map": "/HireFit/static/css/main.d6129e92.css.map",
+    "main.fcdc210b.js.map": "/HireFit/static/js/main.fcdc210b.js.map",
+    "453.45dbc65f.chunk.js.map": "/HireFit/static/js/453.45dbc65f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.d6129e92.css",
-    "static/js/main.cf6e756f.js"
+    "static/js/main.fcdc210b.js"
   ]
 }
