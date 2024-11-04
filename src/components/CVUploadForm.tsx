@@ -1,3 +1,6 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
+
+
 import React, { useState } from 'react';
 import '../styles/upload.css'
 import {useNavigate} from "react-router-dom";
