@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import '../styles/upload.css'
+import {useNavigate} from "react-router-dom";
 
 const CVUploadForm: React.FC = () => {
     const [name, setName] = useState('');
@@ -9,6 +11,13 @@ const CVUploadForm: React.FC = () => {
         e.preventDefault();
         // Logique d'envoi des données
     };
+
+    const navigate = useNavigate();
+
+    const handleAnalyzeClick = (): void => {
+        navigate("/score");
+    };
+
 
     return (
         <form className="cv-upload-form" onSubmit={handleSubmit}>
@@ -31,7 +40,7 @@ const CVUploadForm: React.FC = () => {
                 onChange={(e) => setFile(e.target.files ? e.target.files[0] : null)}
                 required
             />
-            <button type="submit">Analyser mon CV</button>
+            <button type="submit" onClick={handleAnalyzeClick}>Analyser mon CV</button>
         </form>
     );
 };

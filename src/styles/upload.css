@@ -1,5 +1,27 @@
-.upload {
-    width: 100vw;
-    height: 100vh;
-    background: #ffffff;
+/* Évite le scroll horizontal sur la page */
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Cache le débordement horizontal */
 }
+
+/* Ajustements pour le formulaire */
+.cv-upload-form {
+    width: 40vw;
+    max-width: 100%; /* Limite à la largeur du conteneur */
+    height: 50vh;
+    margin-top: 10vh;
+    margin-left: auto;
+    margin-right: auto;
+    background: #ffffff;
+    position: relative;
+    display: flex;
+    gap: 5vh;
+    flex-direction: column;
+    overflow: hidden;
+    box-sizing: border-box;
+    padding: 1vw;
+}
+
+
+
